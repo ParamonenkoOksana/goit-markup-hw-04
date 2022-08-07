@@ -8,6 +8,8 @@
   --background-color-section: #2f303a;
   --primery-background-color-btn: #f5f4fa;
 
+  --primery-icon-background: #afb1b8;
+
   --card-set-gap: 30px;
 }
 
@@ -85,6 +87,7 @@ img {
   clip-path: inset(50%);
   margin: -1px;
 }
+
 /* -----------CТУДИЯ------------ */
 /* HEADER*/
 /* --HEADER-NAV-- */
@@ -177,11 +180,24 @@ img {
 }
 
 /* --HERO-- */
+
 .hero {
   text-align: center;
   max-width: 1600px;
   padding: 200px 0;
+
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  /* outline: 1px solid red; */
+
   background-color: var(--background-color-section);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
 }
 
 .hero-title {
@@ -197,6 +213,7 @@ img {
   text-transform: uppercase;
   color: var(--text-color-white);
 }
+
 /* --BUTTON-- */
 .button {
   display: inline-block;
@@ -236,6 +253,17 @@ img {
   display: flex;
   column-gap: 30px;
   align-items: center;
+}
+
+.feature-icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primery-background-color-btn);
 }
 
 .feature-title {
@@ -338,9 +366,41 @@ img {
 .command-text {
   font-size: 16px;
   text-align: center;
+  margin-bottom: 16px;
 
   letter-spacing: 0.03em;
   color: var(--text-color-gray);
+}
+
+.command-soc {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.command-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primery-background-color);
+}
+
+.command-soc-icon {
+  fill: var(--primery-icon-background);
+}
+
+.command-soc-link:hover,
+.command-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+.command-soc-link:hover .command-soc-icon,
+.command-soc-link:focus .command-soc-icon {
+  fill: var(--primery-background-color);
 }
 
 /* --FOOTER-- */
